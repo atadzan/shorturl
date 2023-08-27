@@ -1,10 +1,7 @@
 Name: transform.rpc
 ListenOn: 0.0.0.0:8080
-Etcd:
-  Hosts:
-  - 127.0.0.1:2379
-  Key: transform.rpc
-DataSource: root:@tcp(localhost:3306)/urlShortener
-Table: shorturl
+Mode: dev
+
+DataSource: root:hello@tcp(localhost:6603)/gozero
 Cache:
   - Host: localhost:6385

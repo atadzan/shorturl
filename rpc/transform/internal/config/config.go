@@ -7,7 +7,6 @@ import (
 
 type Config struct {
 	zrpc.RpcServerConf
-	DataSource string          // manual code
-	Table      string          // manual code
+	DataSource string          // manual code 	// manual code
 	Cache      cache.CacheConf // manual code
 }
