@@ -2,9 +2,9 @@ package logic
 
 import (
 	"context"
-
 	"github.com/atadzan/shorturl/internal/svc"
 	"github.com/atadzan/shorturl/internal/types"
+	"github.com/atadzan/shorturl/rpc/transform/transformer"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -23,8 +23,15 @@ func NewShortenLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ShortenLo
 	}
 }
 
-func (l *ShortenLogic) Shorten(req *types.ShortenReq) (resp *types.ShortenResp, err error) {
-	resp = new(types.ShortenResp)
-	resp.Shorten = "your url will be shortened soon"
-	return
+func (l *ShortenLogic) Shorten(req *types.ShortenReq) (*types.ShortenResp, error) {
+	// manual code
+	rpcResp, err := l.svcCtx.Transformer.Shorten(l.ctx, &transformer.ShortenReq{
+		Url: req.Url,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return &types.ShortenResp{
+		Shorten: rpcResp.Shorten,
+	}, nil
 }
