@@ -2,10 +2,9 @@ package logic
 
 import (
 	"context"
+	"github.com/atadzan/shorturl/api/internal/svc"
+	"github.com/atadzan/shorturl/api/internal/types"
 	"github.com/atadzan/shorturl/rpc/transform/transformer"
-
-	"github.com/atadzan/shorturl/internal/svc"
-	"github.com/atadzan/shorturl/internal/types"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

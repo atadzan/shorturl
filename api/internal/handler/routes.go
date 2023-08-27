@@ -2,9 +2,8 @@
 package handler
 
 import (
+	"github.com/atadzan/shorturl/api/internal/svc"
 	"net/http"
-
-	"github.com/atadzan/shorturl/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )

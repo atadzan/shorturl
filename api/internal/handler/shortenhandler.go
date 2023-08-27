@@ -1,11 +1,11 @@
 package handler
 
 import (
+	"github.com/atadzan/shorturl/api/internal/logic"
+	"github.com/atadzan/shorturl/api/internal/svc"
+	"github.com/atadzan/shorturl/api/internal/types"
 	"net/http"
 
-	"github.com/atadzan/shorturl/internal/logic"
-	"github.com/atadzan/shorturl/internal/svc"
-	"github.com/atadzan/shorturl/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 

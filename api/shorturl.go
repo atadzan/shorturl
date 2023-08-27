@@ -3,16 +3,15 @@ package main
 import (
 	"flag"
 	"fmt"
-
-	"github.com/atadzan/shorturl/internal/config"
-	"github.com/atadzan/shorturl/internal/handler"
-	"github.com/atadzan/shorturl/internal/svc"
+	"github.com/atadzan/shorturl/api/internal/config"
+	"github.com/atadzan/shorturl/api/internal/handler"
+	"github.com/atadzan/shorturl/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
 )
 
-var configFile = flag.String("f", "etc/shorturl-api.yaml", "the config file")
+var configFile = flag.String("f", "api/etc/shorturl-api.yaml", "the config file")
 
 func main() {
 	flag.Parse()

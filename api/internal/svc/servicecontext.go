@@ -1,7 +1,7 @@
 package svc
 
 import (
-	"github.com/atadzan/shorturl/internal/config"
+	"github.com/atadzan/shorturl/api/internal/config"
 	"github.com/atadzan/shorturl/rpc/transform/transformer"
 	"github.com/zeromicro/go-zero/zrpc"
 )
