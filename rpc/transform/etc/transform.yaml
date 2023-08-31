@@ -2,6 +2,11 @@ Name: transform.rpc
 ListenOn: 0.0.0.0:8080
 Mode: dev
 
+Etcd:
+  Hosts:
+    - localhost:2379
+  Key: transform.rpc
+
 DataSource: user:password@tcp(localhost:6606)/db
 Cache:
   - Host: localhost:6385
